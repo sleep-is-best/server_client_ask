@@ -1,0 +1,53 @@
+name: server_client
+description: "A new Flutter project."
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.1.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^1.0.8
+  socket_io_client: ^3.0.0
+  flutter_webrtc: ^0.12.3
+  permission_handler: ^11.3.1
+  path_provider: ^2.1.2
+  flutter_local_notifications: ^17.0.0
+  flutter_background_service: ^5.0.0
+  flutter_background_service_android: ^6.0.0
+  sqflite: ^2.3.0
+  path: ^1.8.3
+  # البديل المستقر والاحترافي للصوت
+  flutter_sound: ^9.2.13
+  audioplayers: ^5.2.1
+  image_picker: ^1.0.7
+  provider: ^6.1.1
+  intl: ^0.19.0
+  isar: ^3.1.0+1
+  isar_flutter_libs: ^3.1.0+1
+  encrypt: ^5.0.3
+  file_picker: ^8.0.0
+  geolocator: ^13.0.1
+  url_launcher: ^6.3.0
+  # البديل المستقر لفتح الملفات
+  open_filex: ^4.5.0
+  fast_contacts: ^5.0.1
+  shared_preferences: ^2.2.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_lints: ^6.0.0
+  isar_generator: ^3.1.0+1
+  build_runner: ^2.4.8
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    # - assets/chat_bg.png

@@ -1,0 +1,10 @@
+[
+  { "id": 1, "specializationId": 1, "name": "المستوى الأول" },
+  { "id": 2, "specializationId": 1, "name": "المستوى الثاني" },
+  { "id": 3, "specializationId": 1, "name": "المستوى الثالث" },
+  { "id": 4, "specializationId": 1, "name": "المستوى الرابع" },
+  { "id": 5, "specializationId": 2, "name": "المستوى الأول" },
+  { "id": 6, "specializationId": 2, "name": "المستوى الثاني" },
+  { "id": 7, "specializationId": 2, "name": "المستوى الثالث" },
+  { "id": 8, "specializationId": 2, "name": "المستوى الرابع" }
+]

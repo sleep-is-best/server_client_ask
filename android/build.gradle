@@ -1,0 +1,49 @@
+allprojects {
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
+
+rootProject.layout.buildDirectory.value(rootProject.layout.buildDirectory.dir("../../build").get())
+
+subprojects {
+    project.layout.buildDirectory.value(rootProject.layout.buildDirectory.dir(project.name).get())
+}
+
+subprojects {
+    def fixNamespace = { p ->
+        if (p.hasProperty('android')) {
+            if (p.android.namespace == null) {
+                if (p.name.contains("isar")) {
+                    p.android.namespace = "dev.isar." + p.name.replaceAll("-", "_")
+                } else {
+                    try {
+                        def manifestFile = file("${p.projectDir}/src/main/AndroidManifest.xml")
+                        if (manifestFile.exists()) {
+                            def manifestContent = manifestFile.getText()
+                            def matcher = manifestContent =~ /package="([^"]+)"/
+                            if (matcher.find()) {
+                                p.android.namespace = matcher.group(1)
+                                // حذف سمة package من المانيفست لتجنب خطأ AGP 8+
+                                def updatedContent = manifestContent.replaceFirst(/package="[^"]+"/, "")
+                                manifestFile.write(updatedContent)
+                            }
+                        }
+                    } catch (Exception e) {
+                        // تجاهل الأخطاء
+                    }
+                }
+            }
+        }
+    }
+    if (project.state.executed) {
+        fixNamespace(project)
+    } else {
+        project.afterEvaluate { fixNamespace(it) }
+    }
+}
+
+tasks.register("clean", Delete) {
+    delete rootProject.layout.buildDirectory
+}

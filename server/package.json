@@ -1,0 +1,14 @@
+{
+  "name": "chat-server",
+  "version": "1.0.0",
+  "description": "Node.js server for end-to-end encrypted chat",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "http": "^0.0.1-security",
+    "socket.io": "^4.7.2"
+  }
+}
