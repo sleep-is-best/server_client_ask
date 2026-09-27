@@ -1,0 +1,51 @@
+{
+  "users": [
+    {
+      "studentId": "STU-312583",
+      "name": "عمرو خالد الحيقي",
+      "phone": "774632182",
+      "points": 0,
+      "role": "student",
+      "profilePicture": null
+    }
+  ],
+  "questions": [],
+  "reels": [],
+  "materials": [],
+  "specializations": [
+    {
+      "id": 1,
+      "name": "علوم الحاسوب"
+    },
+    {
+      "id": 2,
+      "name": "هندسة البرمجيات"
+    }
+  ],
+  "levels": [
+    {
+      "id": 1,
+      "specId": 1,
+      "name": "المستوى الأول"
+    },
+    {
+      "id": 2,
+      "specId": 1,
+      "name": "المستوى الثاني"
+    }
+  ],
+  "subjects": [
+    {
+      "id": 1,
+      "levelId": 1,
+      "semesterId": 1,
+      "name": "برمجة 1"
+    },
+    {
+      "id": 2,
+      "levelId": 1,
+      "semesterId": 1,
+      "name": "رياضيات متقطعة"
+    }
+  ]
+}
